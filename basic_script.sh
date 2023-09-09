@@ -30,6 +30,7 @@ if [ -z "$ip" ]; then
 fi
 
 # Run nmap on the specified IP
+# Supply your own flags and scripts
 nmap $ip
 
 exit 0
