@@ -30,7 +30,9 @@ if [ -z "$ip" ]; then
 fi
 
 # Run nmap on the specified IP
-# More threads with SYN scan only(possible IDS evasion) and disable ping scan
-nmap -T4 -sN -Pn $ip
+nmap -T1 -sN -Pn $ip
+
+# "Sneaky" Timing Template (possible IDS evasion)
+# Disabled Ping scan with TCP bit set to 0
 
 exit 0
